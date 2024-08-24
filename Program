@@ -1,0 +1,31 @@
+#include <iostream>
+
+
+using namespace std;
+
+int main() {
+    // Deklaracja zmiennych
+    float moc_urzadzenia;       // Moc urzadzenia w watach (W)
+    float czas_pracy;      // Czas pracy urzadzenia w godzinach (h)
+    float cena_pradu;      // Cena za 1 kWh energii (zl)
+    float koszt;     // Calkowity koszt energii (zl)
+
+    // Wprowadzenie danych przez uzytkownika
+    cout << "Podaj moc urzadzenia (w watach): ";
+    cin >> moc_urzadzenia;
+
+    cout << "Podaj czas pracy urzadzenia (w godzinach): ";
+    cin >> czas_pracy;
+
+    cout << "Podaj cene za 1 kWh energii (w zlotych): ";
+    cin >> cena_pradu;
+
+    // Obliczenie kosztu energii
+    float energia_kWh = (moc_urzadzenia / 1000) * czas_pracy;  // Energia w kWh
+    koszt = energia_kWh * cena_pradu;               // Koszt energii
+
+    // Wyswietlenie wyniku
+    cout << "Koszt zuzytej energii wynosi: " << koszt << " zl" << endl;
+
+    return 0;
+}
